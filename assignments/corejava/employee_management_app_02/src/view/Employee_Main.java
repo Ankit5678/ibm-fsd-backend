@@ -41,17 +41,18 @@ public class Employee_Main {
 				case 2:
 					System.out.println("Enter Emp Id");
 					int x= sc.nextInt();
-					//view(x);
+					e_Service.view(x);
 					break;
 				case 3:
 					System.out.println("Enter Emp Id");
 					x= sc.nextInt();
-					//update(x);
+					e = takeInput();
+					e_Service.update(x,e);
 					break;
 				case 4:
 					System.out.println("Enter Emp Id");
 					x= sc.nextInt();
-					//delete(x);
+					e_Service.delete(x);
 					break;
 				case 5:
 					e_Service.viewAllEmployees();

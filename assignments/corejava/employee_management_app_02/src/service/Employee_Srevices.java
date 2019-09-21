@@ -42,4 +42,24 @@ public class Employee_Srevices implements IEmployee_Services {
 		db_Service.insertNewEmployee(id,age,name,department,designation,country);
 	}
 
+	public void view(int x) {
+		Employee e = db_Service.findEmployee(x);
+		System.out.println(e);
+	}
+
+	public void update(int x, Employee e) {
+		int id = e.getId();
+		int age = e.getAge();
+		String name = e.getName();
+		String department = e.getDept();
+		String designation = e.getDesign();
+		String country = e.getCountry();
+		db_Service.insertNewEmployeeAtPosition(id,age,name,department,designation,country,x);
+	}
+
+	public void delete(int x) {
+		db_Service.deleteEmployeeFromDb(x);
+		System.out.println("Employee deleted ...");
+	}
+
 }
