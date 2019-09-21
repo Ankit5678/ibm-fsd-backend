@@ -58,11 +58,11 @@ public class Employee_Main {
 					e_Service.viewAllEmployees();
 					break;
 				case 6:
-					//importEmployees();
+					e_Service.importEmployees();
 					//importEmployeesUsingExecutor();
 					break;
 				case 7:
-					//exportEmployees(empList);
+					e_Service.exportEmployees();
 					break;
 				case 10:
 					System.out.println("Exiting...");
