@@ -62,7 +62,7 @@ public class EmployeeDAO implements IEmployeeDAO{
 				pstmt.setInt(2, e.getAge());
 				pstmt.setString(3, e.getDesig());
 				pstmt.setString(4, e.getDept());
-				pstmt.setString(5, Integer.toString(e.getSalary()));
+				pstmt.setString(5, e.getCountry());
 				int insertCount = pstmt.executeUpdate();
 				pstmt.close();
 				System.out.println(insertCount + " Employee(s) inserted");} catch (SQLException e1) {
@@ -90,7 +90,7 @@ public class EmployeeDAO implements IEmployeeDAO{
 			e.setEmpId(rs.getInt("id"));
 			e.setDept( rs.getString("department"));
 			e.setDesig( rs.getString("designation"));
-			e.setSalary(Integer.parseInt(rs.getString("country")));
+			e.setCountry(rs.getString("country"));
 			}
 		} catch (SQLException ek) {
 			ek.printStackTrace();
@@ -130,7 +130,7 @@ public class EmployeeDAO implements IEmployeeDAO{
 				e.setAge(rs.getInt("age"));
 				e.setDept( rs.getString("department"));
 				e.setDesig( rs.getString("designation"));
-				e.setSalary(Integer.parseInt(rs.getString("country")));
+				e.setCountry(rs.getString("country"));
 				eList.add(e);
 				}
 			} catch (SQLException e) {
@@ -148,7 +148,7 @@ public class EmployeeDAO implements IEmployeeDAO{
 				pstmt.setInt(2, e.getAge());
 				pstmt.setString(3, e.getDesig());
 				pstmt.setString(4, e.getDept());
-				pstmt.setString(5, Integer.toString(e.getSalary()));
+				pstmt.setString(5, e.getCountry());
 				pstmt.setInt(6, e.getEmpId());
 				int deleteCount= pstmt.executeUpdate();
 				pstmt.close();
