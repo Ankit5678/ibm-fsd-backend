@@ -29,7 +29,7 @@ out.print("No of employees:" +emp.size());
 				<td><%= empl.getAge() %></td>
 				<td><%= empl.getDesig() %></td>
 				<td><%= empl.getDept() %></td>
-				<td><%= empl.getSalary() %></td>
+				<td><%= empl.getCountry() %></td>
 				<form action="deleteEmployee" method="post">
 				<td><button type="btn" name="delId" value=<%=empl.getEmpId() %>>DELETE</button></td>
 				</form>

@@ -23,8 +23,8 @@
 <label for="empDesig">Employee Designation</label>
 <input type="text" id="empDesig" name="empDesig" placeholder="Enter the designation here"><br><br>
 
-<label for="empSal">Employee Salary</label>
-<input type="text" id="empSal" name="empSal" placeholder="Enter the salary here"><br><br>
+<label for="empSal">Employee Country</label>
+<input type="text" id="empSal" name="empCountry" placeholder="Enter the country here"><br><br>
 
 <input type="submit" id="addEmp" placeholder="ADD">
 <input type="reset" id="resetEmp" placeholder="RESET">

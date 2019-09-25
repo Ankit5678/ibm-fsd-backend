@@ -56,10 +56,10 @@ public class EmployeeService{
 	public void importEmp(){
 		Scanner scan = new Scanner(System.in);
 		try {
-            scan = new Scanner(new BufferedReader(new InputStreamReader(new FileInputStream("C:\\Users\\HariGovind\\Desktop\\FSD-Saravana\\Personal Progress\\Assignments\\src\\com\\Java\\Assignment1_jdbc\\Services\\emplist.txt"))));
+            scan = new Scanner(new BufferedReader(new InputStreamReader(new FileInputStream("/employee-mgmt-app03/src/com/examples/empapp/services/emplist.txt"))));
             while (scan.hasNextLine()) {
             	String[] emp = scan.nextLine().split(",");	
-            		Employee empfile = new Employee(Integer.parseInt(emp[0]), emp[1], Integer.parseInt(emp[2]), emp[3], emp[4], Integer.parseInt(emp[5]));
+            		Employee empfile = new Employee(Integer.parseInt(emp[0]), emp[1], Integer.parseInt(emp[2]), emp[3], emp[4], emp[5]);
             		dao.addEmpDb(empfile);
             }
             viewAllEmp();
@@ -77,12 +77,12 @@ public class EmployeeService{
 	
 	public void exportEmp() {
 		try {
-			FileOutputStream fileOut = new FileOutputStream("C:\\\\Users\\\\HariGovind\\\\Desktop\\\\FSD-Saravana\\\\Personal Progress\\\\Assignments\\\\src\\\\com\\\\Java\\\\Assignment1_jdbc\\\\services\\\\empexp.txt");
+			FileOutputStream fileOut = new FileOutputStream("/employee-mgmt-app03/src/com/examples/empapp/services/empexp.txt");
 			List<Employee> eList = new ArrayList<Employee>();
 			eList = dao.viewAllEmpDb();
 			for(Employee e:eList) {
 				try {
-					String objlist = String.format("%d,%s,%d,%s,%s,%d", e.getEmpId(),e.getEmpName(),e.getAge(),e.getDesig(),e.getDept(),e.getSalary());
+					String objlist = String.format("%d,%s,%d,%s,%s,%d", e.getEmpId(),e.getEmpName(),e.getAge(),e.getDesig(),e.getDept(),e.getCountry());
 					System.out.println(objlist);
 					fileOut.write(objlist.getBytes());
 					fileOut.write("\n".getBytes());

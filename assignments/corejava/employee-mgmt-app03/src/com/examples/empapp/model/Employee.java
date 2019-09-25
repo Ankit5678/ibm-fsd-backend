@@ -8,18 +8,18 @@ public class Employee implements java.io.Serializable {
 	int age;
 	String desig;
 	String dept;
-	int salary;
+	String country;
 	
 	public Employee() {}
 	
-	public Employee(int empId, String empName, int age, String desig, String dept, int salary) {
+	public Employee(int empId, String empName, int age, String desig, String dept, String country) {
 		super();
 		this.empId = empId;
 		this.empName = empName;
 		this.age = age;
 		this.desig = desig;
 		this.dept = dept;
-		this.salary = salary;
+		this.country = country;
 	}
 
 	public int getEmpId() {
@@ -45,14 +45,6 @@ public class Employee implements java.io.Serializable {
 	public void setDept(String dept) {
 		this.dept = dept;
 	}
-
-	public int getSalary() {
-		return salary;
-	}
-
-	public void setSalary(int salary) {
-		this.salary = salary;
-	}
 	
 	public int getAge() {
 		return age;
@@ -70,6 +62,13 @@ public class Employee implements java.io.Serializable {
 		this.desig = desig;
 	}
 
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
 
 	public void printDetails() {
 		// print employee details
@@ -79,7 +78,7 @@ public class Employee implements java.io.Serializable {
 		System.out.println("Age: " + this.getAge());
 		System.out.println("Designation: " + this.getDesig());
 		System.out.println("Department: " + this.getDept());
-		System.out.println("Salary: " + this.getSalary());
+		System.out.println("Country: " + this.getCountry());
 		System.out.println();
 	}
 }

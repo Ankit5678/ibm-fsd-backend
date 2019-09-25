@@ -30,7 +30,7 @@ public class AddEmployeeController extends HttpServlet {
 		int age = Integer.parseInt(request.getParameter("empAge"));
 		String dept = request.getParameter("empDept");
 		String desig = request.getParameter("empDesig");
-		int sal = Integer.parseInt(request.getParameter("empSal"));
+		String country = request.getParameter("empCountry");
 		
 		System.out.println(name);
 		System.out.println(age);
@@ -40,7 +40,7 @@ public class AddEmployeeController extends HttpServlet {
 		e.setAge(age);
 		e.setDept(dept);
 		e.setDesig(desig);
-		e.setSalary(sal);
+		e.setCountry(country);
 //		
 		EmployeeService eserv = new EmployeeService();
 		eserv.addEmp(e);

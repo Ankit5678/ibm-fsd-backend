@@ -30,7 +30,7 @@
 				<td><%= emp.getAge() %></td>
 				<td><%= emp.getDesig() %></td>
 				<td><%= emp.getDept() %></td>
-				<td><%= emp.getSalary() %></td>
+				<td><%= emp.getCountry()%></td>
 			</tr>
 		</tbody>
 		</tbody>
