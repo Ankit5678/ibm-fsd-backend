@@ -48,17 +48,5 @@ public class ListAllEmployeeController extends HttpServlet {
    		return "listEmployees";
    	}
 
-//	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		doPost(request, response);
-//	}
-//
-//
-//	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		EmployeeService eserv = new EmployeeService();
-//		List<Employee> listEmp = eserv.viewAllEmp();
-//		request.setAttribute("empList", listEmp);
-//		RequestDispatcher rd = request.getRequestDispatcher("listEmployees.jsp");
-//		rd.forward(request, response);
-//	}
 
 }

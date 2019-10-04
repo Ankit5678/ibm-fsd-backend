@@ -45,13 +45,6 @@ public class DeleteEmployeeController extends HttpServlet {
     	return "home";
     }
     
-//	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		int eId = Integer.parseInt(request.getParameter("delId"));
-//		System.out.println(eId);
-//		eserv.deleteEmp(eId);
-//		
-//		RequestDispatcher rd = request.getRequestDispatcher("listAllEmployee.do");
-//		rd.forward(request, response);
-//	}
+
 
 }
